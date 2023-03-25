@@ -28,7 +28,11 @@ def main():
                 if args.method == 'mean':
                     value = sum(not_null) / len(not_null)
                 else:
-                    value = sorted(not_null)[len(not_null) // 2]
+                    sorted_arr = sorted(not_null)
+                    if len(not_null) % 2 != 0:
+                        value = sorted_arr[len(not_null) // 2]
+                    else:
+                        value = (sorted_arr[len(not_null) // 2 - 1] + sorted_arr[len(not_null) // 2]) /     2
         except:
             value = col[0]
 
