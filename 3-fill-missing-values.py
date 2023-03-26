@@ -32,7 +32,9 @@ def main():
                     if len(not_null) % 2 != 0:
                         value = sorted_arr[len(not_null) // 2]
                     else:
-                        value = (sorted_arr[len(not_null) // 2 - 1] + sorted_arr[len(not_null) // 2]) /     2
+                        left = sorted_arr[len(not_null) // 2 - 1]
+                        right = sorted_arr[len(not_null) // 2]
+                        value = (left + right) / 2
         except:
             value = col[0]
 
